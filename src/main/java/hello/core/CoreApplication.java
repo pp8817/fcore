@@ -11,6 +11,7 @@ public class CoreApplication {
 //커밋 테스트용
 		//커밋
 		///테스트테스트테스트
+		//test입니다.
 	}
 
 }
