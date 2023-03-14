@@ -10,6 +10,7 @@ public class CoreApplication {
 		SpringApplication.run(CoreApplication.class, args);
 //커밋 테스트용
 		//커밋
+		///테스트테스트테스트
 	}
 
 }
