@@ -9,6 +9,7 @@ public class CoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CoreApplication.class, args);
 //커밋 테스트용
+		//커밋
 	}
 
 }
