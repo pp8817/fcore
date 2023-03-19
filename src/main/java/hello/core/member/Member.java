@@ -1,7 +1,6 @@
 package hello.core.member;
 
 public class Member {
-//테스트임.
     private Long id;
     private String name;
     private Grade grade;
