@@ -9,6 +9,7 @@ public class MemberApp {
     public static void main(String[] args) {
         AppConfig appConfig = new AppConfig();
         MemberService memberService = appConfig.memberService();
+        //구체 클래스에는 의존하지 않고 인터페이스에만 의존
 //        MemberService memberService = new MemberServiceImpl();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);

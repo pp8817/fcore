@@ -13,7 +13,7 @@ public class OrderApp {
         AppConfig appConfig = new AppConfig();
         MemberService memberService = appConfig.memberService();
         OrderService orderService = appConfig.orderService();
-
+        //구체 클래스에는 의존하지 않고 인터페이스에만 의존하도록 설정
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
         memberService.join(member);
