@@ -7,12 +7,18 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.order.Order;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OrderApp {
     public static void main(String[] args) {
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
-        OrderService orderService = appConfig.orderService();
+//        AppConfig appConfig = new AppConfig();
+//        MemberService memberService = appConfig.memberService();
+//        OrderService orderService = appConfig.orderService();
+
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
         //구체 클래스에는 의존하지 않고 인터페이스에만 의존하도록 설정
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
