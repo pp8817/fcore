@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 //각 impl 클래스들이 인터페이스에 의존, appconfig가 구체 클래스를 선택
 @Configuration
 public class AppConfig {
-    @Bean
+    @Bean  //의존 관계 주입
     public MemberService memberService(){
         return new MemberServiceImpl(memberRepository());
     }
