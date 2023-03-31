@@ -29,8 +29,9 @@ public class AppConfig {
     //구체 클래스에 의존하지 않고 인터페이스에만 의존하도록 도와줌
     @Bean
     public OrderService orderService(){
-        return new OrderServiceImpl(
-                memberRepository(), discountPolicy());
+//        return new OrderServiceImpl(
+//                memberRepository(), discountPolicy());
+        return null;
     }
     @Bean
     public DiscountPolicy discountPolicy(){
